@@ -37,6 +37,14 @@ body {
     width: 327px;
     margin-left: 5px;
     margin-right: 5px;
+    position: relative;
+  }
+
+  .error {
+    position: absolute;
+    left: 60px;
+    bottom: 5px;
+    margin: 0;
   }
 
   .mode {
@@ -44,6 +52,7 @@ body {
     margin-right: 10px;
     margin-top: 0;
   }
+
   .search {
     width: 327px;
     font-size: 13px;

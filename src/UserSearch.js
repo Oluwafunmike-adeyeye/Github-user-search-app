@@ -81,7 +81,7 @@ const UserSearch = () => {
               />
             </span>
           </div>
-          {error && <p className="text-red-500 my-2 ml-32">{error}</p>}
+          {error && <p className="error text-red-500 my-2 ml-32">{error}</p>}
           <button className="my-btn bg-[#0079FF] text-white rounded-lg py-2 px-4 mr-4" onClick={fetchUserData}>
             Search
           </button>
