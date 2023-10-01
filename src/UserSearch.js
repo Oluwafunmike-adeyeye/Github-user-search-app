@@ -35,11 +35,11 @@ const UserSearch = () => {
 
   return (
     <div
-      className={`mobile h-[full] md:h-screen w-full md:w-full px-70 p-4 flex justify-center ${
+      className={`mobile h-screen w-full md:w-full px-70 p-4 flex justify-center ${
         theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-697C9A'
       }`}
     >
-      <div className="hey w-[573px] md:w-[700px] my-16">
+      <div className="hey w-[573px] md:w-[700px] mt-6 md:my-16">
         <div className="mode flex justify-between mb-5">
           <h4 className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-222731'} text-[26px]`}>devfinder</h4>
           <button
