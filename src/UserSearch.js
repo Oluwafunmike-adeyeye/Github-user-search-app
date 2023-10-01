@@ -33,6 +33,15 @@ const UserSearch = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
+  const formatJoinDate = (date) => {
+    const joinedDate = new Date(date);
+    const day = joinedDate.getDate();
+    const month = joinedDate.toLocaleString('default', { month: 'short' });
+    const year = joinedDate.getFullYear();
+    return `${day} ${month} ${year}`;
+  };
+
+
   return (
     <div
       className={`mobile h-screen w-full md:w-full px-70 p-4 flex justify-center ${
@@ -89,15 +98,15 @@ const UserSearch = () => {
               <div className="flex justify-between items-center">
                 <img src={userData.avatar_url} className="w-[117px] h-[117px] rounded-full md:hidden" alt="avatar" />
                 <div className="ml-4">
-                  <div className="flex gap-20">
+                  <div className="flex gap-10">
                     <p className="oct font-bold text-[26px]">{userData.name}</p>
                     <p className={`join text-[15px] pt-3 hidden md:block ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
-                      Joined {new Date(userData.created_at).getFullYear()}
+                      Joined {formatJoinDate(userData.created_at)}
                     </p>
                   </div>
                   <p className="text-[16px] text-[#0079FF]">@{userData.name}</p>
                   <p className={`join-2 text-[15px] md:hidden ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
-                      Joined {new Date(userData.created_at).getFullYear()}
+                      Joined {formatJoinDate(userData.created_at)}
                   </p>
                 </div>
               </div>
