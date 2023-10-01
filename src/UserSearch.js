@@ -156,7 +156,7 @@ const UserSearch = () => {
                     </a>
                   </span>
                   <span className={`flex gap-3 font-[14px] mb-3 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
-                  <HiMiniBuildingOffice2 size={20} /> <a href="#">@github</a>
+                  <HiMiniBuildingOffice2 size={20} /> <a href="https://github.com">@github</a>
                   </span>
                 </div>
               </div>
@@ -213,7 +213,7 @@ const UserSearch = () => {
                     <img src={chain} alt="" /> <a href="http://github.com">https://github.blog</a>
                   </span>
                   <span className={`flex gap-3 font-[14px] mb-3 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
-                  <HiMiniBuildingOffice2 size={20} /> <a href="#">@github</a>
+                  <HiMiniBuildingOffice2 size={20} /> <a href="http://github.com">@github</a>
                   </span>
                 </div>
               </div> 
