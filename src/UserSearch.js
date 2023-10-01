@@ -35,15 +35,15 @@ const UserSearch = () => {
 
   return (
     <div
-      className={`h-[1024px] md:h-screen w-full md:w-[1640px] px-70 p-4 flex justify-center ${
+      className={`mobile h-[full] md:h-screen w-full md:w-full px-70 p-4 flex justify-center ${
         theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-697C9A'
       }`}
     >
-      <div className="w-[573px] md:w-[700px] my-20">
-        <div className="flex justify-between mb-5">
+      <div className="hey w-[573px] md:w-[700px] my-16">
+        <div className="mode flex justify-between mb-5">
           <h4 className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-222731'} text-[26px]`}>devfinder</h4>
           <button
-            className={`flex gap-2 ${theme === 'dark' ? 'text-white' : 'text-222731'} text-[13px]`}
+            className={`flex gap-2 pt-3 ${theme === 'dark' ? 'text-white' : 'text-222731'} text-[13px]`}
             onClick={toggleTheme}
           >
             {theme === 'dark' ? 'LIGHT' : 'DARK'}{' '}
@@ -73,7 +73,7 @@ const UserSearch = () => {
             </span>
           </div>
           {error && <p className="text-red-500 my-2 ml-32">{error}</p>}
-          <button className="bg-[#0079FF] text-white rounded-lg py-2 px-4 mr-4" onClick={fetchUserData}>
+          <button className="my-btn bg-[#0079FF] text-white rounded-lg py-2 px-4 mr-4" onClick={fetchUserData}>
             Search
           </button>
         </div>
@@ -90,24 +90,24 @@ const UserSearch = () => {
                 <img src={userData.avatar_url} className="w-[117px] h-[117px] rounded-full md:hidden" alt="avatar" />
                 <div className="ml-4">
                   <div className="flex gap-20">
-                    <p className="font-bold text-[26px]">{userData.name}</p>
-                    <p className={`text-[15px] pt-3 hidden md:block ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
+                    <p className="oct font-bold text-[26px]">{userData.name}</p>
+                    <p className={`join text-[15px] pt-3 hidden md:block ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
                       Joined {new Date(userData.created_at).getFullYear()}
                     </p>
                   </div>
                   <p className="text-[16px] text-[#0079FF]">@{userData.name}</p>
-                  <p className={`text-[15px] md:hidden ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
+                  <p className={`join-2 text-[15px] md:hidden ${theme === 'dark' ? 'text-white' : 'text-697C9A'}`}>
                       Joined {new Date(userData.created_at).getFullYear()}
                   </p>
                 </div>
               </div>
 
-              <p className={`text-[15px] leading-6 my-5 md:ml-5 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
+              <p className={`bio text-[15px] leading-6 my-5 md:ml-5 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
                 {userData.bio}
               </p>
 
               <div
-                className={`flex md:flex-row gap-32 md:mx-2 rounded-lg pl-8 p-4 mt-6 ${
+                className={`repo flex md:flex-row gap-32 md:mx-2 rounded-lg pl-8 p-4 mt-6 ${
                   theme === 'dark' ? 'bg-141D2F text-white' : 'bg-gray-300 text-black'
                 }`}
               >
@@ -164,25 +164,29 @@ const UserSearch = () => {
           </div>
         ) : (
           <div
-            className={`flex my-8 md:gap-4 py-10 px-8 avatar rounded-2xl ${theme === 'dark' ? 'bg-1E2A47' : ''}`}
+            className={`my-box flex my-8 md:gap-4 py-10 px-8 avatar rounded-2xl ${theme === 'dark' ? 'bg-1E2A47' : ''}`}
           >
             <img src={Bitmap} className="w-[117px] h-[117px] rounded-full md:block hidden" alt="avatar" />
             <div>
               <div className="flex justify-between items-center">
                 <img src={Bitmap} className="w-[117px] h-[117px] rounded-full md:hidden" alt="avatar" />
                 <div className="ml-4">
-                  <span className="font-bold text-[26px] mr-20">The Octocat</span>
-                  <span className={`text-[15px] ml-16 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
+                  
+                  <span className="oct font-bold text-[26px] mr-20">The Octocat</span>
+                  <span className={`join text-[15px] ml-16 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
                     Joined 25 Jan 2011
                   </span>
                   <p className="text-[16px] text-[#0079FF]">@octocat</p>
+                  <span className={`join-2 md:hidden text-[15px] ml-16 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
+                    Joined 25 Jan 2011
+                  </span>
                 </div>
               </div>
-              <p className={`text-[15px] leading-6 my-5 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
+              <p className={`bio text-[15px] leading-6 my-5 mx-5 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
                 This profile has no bio
               </p>
               <div
-                className={`flex gap-32 rounded-lg pl-8 p-4 mt-6 ${
+                className={`repo flex gap-32 rounded-lg pl-8 p-4 mt-6 ${
                   theme === 'dark' ? 'bg-141D2F text-white' : 'bg-gray-300 text-black'
                 }`}
               >
