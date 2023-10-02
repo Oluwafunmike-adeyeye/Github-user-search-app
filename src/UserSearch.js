@@ -4,8 +4,9 @@ import { BsFillMoonFill, BsFillSunFill, BsTwitter } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { ImLocation } from 'react-icons/im';
 import { HiMiniBuildingOffice2 } from 'react-icons/hi2';
+import { FaLink } from "react-icons/fa";
 import Bitmap from './images/Bitmap.jpg';
-import chain from './images/chain.jpg';
+
 
 
 const UserSearch = () => {
@@ -160,7 +161,7 @@ const UserSearch = () => {
                 </div>
                 <div className="flex flex-col md:flex-row md:justify-between md:pr-36 md:mt-5">
                   <span className={`flex gap-3 font-[14px] mb-3 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
-                    <img src={chain} alt="" /> <a href={userData.html_url} className="hover:underline">
+                    <FaLink size={20} className="text-[#4B6A9B]" /> <a href={userData.html_url} className="hover:underline">
                       https://github.blog
                     </a>
                   </span>
@@ -223,7 +224,7 @@ const UserSearch = () => {
                 </div>
                 <div className="flex flex-col md:flex-row md:gap-[70px] md:mt-5">
                   <span className={`flex gap-3 font-[14px] mb-3 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
-                    <img src={chain} alt="" /> <a href="http://github.com">https://github.blog</a>
+                    <FaLink size={20} className="text-[#4B6A9B]" /> <a href="http://github.com">https://github.blog</a>
                   </span>
                   <span className={`flex gap-3 font-[14px] mb-3 ${theme === 'dark' ? 'text-white' : 'text-4B6A9B'}`}>
                   <HiMiniBuildingOffice2 size={20} /> <a href="http://github.com">@github</a>
