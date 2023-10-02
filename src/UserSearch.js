@@ -12,7 +12,7 @@ const UserSearch = () => {
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const fetchUserData = async () => {
     try {
